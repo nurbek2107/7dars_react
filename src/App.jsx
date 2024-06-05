@@ -1,7 +1,13 @@
+import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import MainLayout from "./layout/MainLayout"
 function App() {
-  return (
-    <div>App</div>
-  )
-}
+    const routes = createBrowserRouter([
+      {
+        path:"/",
+        element: <MainLayout/>
+      }
+    ])
+    return <RouterProvider router={routes} />
+} 
 
 export default App
